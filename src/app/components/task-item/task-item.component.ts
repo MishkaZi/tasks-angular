@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import TaskModel from '../../TaskModel';
 
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -10,8 +10,13 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 })
 export class TaskItemComponent implements OnInit {
   @Input() task: TaskModel;
+  @Output() onDeleteTask: EventEmitter<TaskModel> = new EventEmitter();
   faTimes = faTimes;
   constructor() {}
 
   ngOnInit(): void {}
+
+  onDelete(task: TaskModel) {
+    this.onDeleteTask.emit(task);
+  }
 }
