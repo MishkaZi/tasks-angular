@@ -28,4 +28,8 @@ export class TasksComponent implements OnInit {
 
     this.taskSetvice.toggleTask(task).subscribe();
   }
+
+  addTask(task: TaskModel) {
+    this.taskSetvice.addTask(task).subscribe((task) => this.tasks.push(task));
+  }
 }

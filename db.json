@@ -11,6 +11,12 @@
       "text": "Meeting at School",
       "day": "May 6th at 1:30pm",
       "reminder": false
+    },
+    {
+      "text": "Throw garbage",
+      "day": "May 1th at 22:30",
+      "reminder": true,
+      "id": 3
     }
   ]
 }
